@@ -12,4 +12,4 @@ Currently configured pools can be seen in the tracker application accessible thr
 ## Installation
 Use automatic Foundry module installation.\
 Module Manifest:\
-`https://github.com/League-of-Fabulous-Developers/diminishing-pools/releases/latest/download/module.json`
+`https://github.com/Shourn/diminishing-pools/releases/latest/download/module.json`
