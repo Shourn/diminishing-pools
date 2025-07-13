@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Foundry-v13-informational)
 
-# Diminishing Pools
+# Diminishing Pools for FoundryVTT
 
 This module adds the ability for GMs to add "Diminishing Pools", dice pools that shrink in size depending on the results.  
 Pools can be created using the `/addpool` or `/newpool` chat commands.  
