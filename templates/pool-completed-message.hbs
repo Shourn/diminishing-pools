@@ -1,0 +1,19 @@
+<div class="diminishing-pool-message">
+    <section>
+        <p>{{localize "DIMPOOLS.chat.completed.message" name=pool.name droppedDice=droppedDice}}</p>
+        {{#if pool.completionMessage}}
+            <p>{{pool.completionMessage}}</p>
+        {{/if}}
+    </section>
+    <section class="pool-actions" data-pool-id="{{pool.id}}">
+        <a data-pool-action="remove" class="hidden">
+            <i class="fa fa-trash"></i>
+            {{localize "DIMPOOLS.chat.actions.remove"}}
+        </a>
+        <a data-pool-action="showTracker">
+            <i class="fa fa-magnifying-glass"></i>
+            {{localize "DIMPOOLS.chat.actions.showTracker"}}
+        </a>
+    </section>
+    {{{roll}}}
+</div>

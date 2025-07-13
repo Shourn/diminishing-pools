@@ -1,0 +1,53 @@
+<section>
+    <fieldset>
+        <legend>{{localize 'DIMPOOLS.configurePool.general.title'}}</legend>
+        <label>
+            {{localize 'DIMPOOLS.configurePool.general.name'}}
+            <input type="text" name="name" value="{{pool.name}}" required
+                   placeholder="{{localize 'DIMPOOLS.configurePool.general.namePlaceholder'}}"/>
+        </label>
+        <label>
+            {{localize 'DIMPOOLS.configurePool.general.completionMessage'}}
+            <input type="text" name="completionMessage" value="{{pool.completionMessage}}"
+                   placeholder="{{localize 'DIMPOOLS.configurePool.general.completionMessagePlaceholder'}}"/>
+            <span class="hint">{{localize 'DIMPOOLS.configurePool.general.completionMessageHint'}}</span>
+        </label>
+        <label>
+            <input type="checkbox" name="hidden" {{checked pool.hidden}} />
+            {{localize 'DIMPOOLS.configurePool.general.hidden'}}
+            <br>
+            <span class="hint">{{localize 'DIMPOOLS.configurePool.general.hiddenHint'}}</span>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>{{localize 'DIMPOOLS.configurePool.pool.title'}}</legend>
+        {{#if edit}}
+            <label>
+                {{localize 'DIMPOOLS.configurePool.pool.dice'}}
+                <input type="number" name="currentDice" value="{{pool.currentDice}}" min="1" max="100" required/>
+                <span class="hint">{{localize 'DIMPOOLS.configurePool.pool.diceHintCurrent'}}</span>
+                <br>
+                <span class="hint">{{localize 'DIMPOOLS.configurePool.pool.diceHintInitialDice' initial=pool.initialDice}}</span>
+            </label>
+        {{else}}
+            <label>
+                {{localize 'DIMPOOLS.configurePool.pool.dice'}}
+                <input type="number" name="initialDice" value="{{pool.initialDice}}" min="1" max="100" required/>
+                <span class="hint">{{localize 'DIMPOOLS.configurePool.pool.diceHint'}}</span>
+            </label>
+        {{/if}}
+        <label>
+            {{localize 'DIMPOOLS.configurePool.pool.dieSize'}}
+            <select name="dieSize" required>
+                {{selectOptions dieSizes selected=pool.dieSize localize=true}}
+            </select>
+        </label>
+        <label>
+            {{localize 'DIMPOOLS.configurePool.pool.dropThreshold'}}
+            <input type="number" name="dropThreshold" value="{{pool.dropThreshold}}" min="1"
+                   max="{{pool.maxDropThreshold}}" required/>
+            <span class="hint">{{localize 'DIMPOOLS.configurePool.pool.dropThresholdHint'}}</span>
+        </label>
+    </fieldset>
+</section>

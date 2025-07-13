@@ -1,0 +1,17 @@
+.diminishing-pool-message {
+
+    section:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    .pool-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: end;
+        padding: 0 1rem;
+
+        & > * {
+            flex: 0 0 auto;
+        }
+    }
+}

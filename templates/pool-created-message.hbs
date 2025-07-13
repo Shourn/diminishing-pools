@@ -1,0 +1,19 @@
+<div class="diminishing-pool-message">
+
+    <section>
+        <p>{{localize "DIMPOOLS.chat.created.message" name=pool.name}}</p>
+        <p>{{localize "DIMPOOLS.chat.created.configuration" dice=pool.currentDice
+                      dieSize=(localize (lookup dieSizes pool.dieSize)) dropThreshold=pool.dropThreshold}}</p>
+    </section>
+    <section class="pool-actions" data-pool-id="{{pool.id}}">
+        <a data-pool-action="roll" class="hidden">
+            <i class="fa fa-dice"></i>
+            {{localize "DIMPOOLS.chat.actions.roll"}}
+        </a>
+        <a data-pool-action="showTracker">
+            <i class="fa fa-magnifying-glass"></i>
+            {{localize "DIMPOOLS.chat.actions.showTracker"}}
+        </a>
+    </section>
+    {{{roll}}}
+</div>

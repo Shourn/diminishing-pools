@@ -1,0 +1,49 @@
+{{log this}}
+<div>
+    <header>
+        <h1 class="flexrow">
+            <span>Diminishing Pools</span>
+            <a data-action="addPool" class="flex0" data-tooltip="{{localize 'DIMPOOLS.poolTrackerApp.addTooltip'}}">
+                <i class="fa fa-plus"></i>
+            </a>
+        </h1>
+    </header>
+    <main>
+        {{#each pools}}
+            {{#if (or (not hidden) @root.gm)}}
+                <fieldset data-index="{{@index}}">
+                    <h2 class="flexrow">
+                        <span>
+                            {{name}}
+                            {{#if hidden}}
+                                <i class="fa fa-user-secret"
+                                   data-tooltip="{{localize 'DIMPOOLS.poolTrackerApp.hiddenTooltip'}}"></i>
+                            {{/if}}
+                        </span>
+                        {{#if @root.gm}}
+                            <span class="flex0 pool-actions">
+                                {{#if (not completed)}}
+                                    <a data-action="rollPool"
+                                       data-tooltip="{{localize 'DIMPOOLS.poolTrackerApp.rollTooltip'}}">
+                                    <i class="fa fa-dice"></i>
+                                </a>
+                                {{/if}}
+                                <a data-action="configurePool"
+                                   data-tooltip="{{localize 'DIMPOOLS.poolTrackerApp.configureTooltip'}}">
+                                    <i class="fa fa-pen"></i>
+                                </a>
+                                <a data-action="deletePool"
+                                   data-tooltip="{{localize 'DIMPOOLS.poolTrackerApp.removeTooltip'}}">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </span>
+                        {{/if}}
+                    </h2>
+                    <p>{{localize 'DIMPOOLS.poolTrackerApp.poolSize' dice=currentDice
+                                  dieSize=(localize (lookup @root.dieSizes dieSize))}}</p>
+                    <p>{{localize 'DIMPOOLS.poolTrackerApp.dropThreshold' value=dropThreshold}}</p>
+                </fieldset>
+            {{/if}}
+        {{/each}}
+    </main>
+</div>

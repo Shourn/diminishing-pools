@@ -1,0 +1,21 @@
+<div class="diminishing-pool-message">
+    <section>
+        <p>{{localize "DIMPOOLS.chat.rolled.dropped" name=pool.name droppedDice=droppedDice}}</p>
+        {{#if (gt pool.currentDice 1)}}
+            <p>{{localize "DIMPOOLS.chat.rolled.remaining.plural" remaining=pool.currentDice}}</p>
+        {{else}}
+            <p>{{localize "DIMPOOLS.chat.rolled.remaining.singular"}}</p>
+        {{/if}}
+    </section>
+    <section class="pool-actions" data-pool-id="{{pool.id}}">
+        <a data-pool-action="roll" class="hidden">
+            <i class="fa fa-dice"></i>
+            {{localize "DIMPOOLS.chat.actions.roll"}}
+        </a>
+        <a data-pool-action="showTracker">
+            <i class="fa fa-magnifying-glass"></i>
+            {{localize "DIMPOOLS.chat.actions.showTracker"}}
+        </a>
+    </section>
+    {{{roll}}}
+</div>

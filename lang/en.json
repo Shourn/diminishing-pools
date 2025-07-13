@@ -1,0 +1,73 @@
+{
+  "DIMPOOLS": {
+    "dieSize": {
+      "d10": "d10",
+      "d100": "d100",
+      "d12": "d12",
+      "d20": "d20",
+      "d4": "d4",
+      "d6": "d6",
+      "d8": "d8"
+    },
+    "poolTrackerApp": {
+      "title": "Pool Tracker",
+      "dropThreshold": "Drop at {value} or below.",
+      "hiddenTooltip": "Hidden",
+      "poolSize": "Pool size: {dice}{dieSize}",
+      "rollTooltip": "Roll",
+      "configureTooltip": "Configure",
+      "removeTooltip": "Remove",
+      "addTooltip": "Add Pool"
+    },
+    "configurePool": {
+      "title": {
+        "add": "Add Pool",
+        "edit": "Edit Pool"
+      },
+      "general": {
+        "title": "General Configuration",
+        "name": "Pool Name",
+        "namePlaceholder": "required",
+        "completionMessage": "Completion Message",
+        "completionMessagePlaceholder": "optional",
+        "completionMessageHint": "This message will be shown to everyone when the pool completes.",
+        "hidden": "Hidden?",
+        "hiddenHint": "Hide progress of this pool from players?"
+      },
+      "pool": {
+        "title": "Pool Configuration",
+        "dice": "Number of Dice",
+        "diceHint": "How many dice are in the pool.",
+        "diceHintCurrent": "How many dice are currently in the pool.",
+        "diceHintInitialDice": "Initial number of dice: {initial}",
+        "dieSize": "Die Size",
+        "dropThreshold": "Drop Threshold",
+        "dropThresholdHint": "Dice that roll this number or below get dropped from the pool."
+      }
+    },
+    "chat": {
+      "rolled": {
+        "flavor": "Pool rolled",
+        "dropped": "Pool '{name}' dropped {droppedDice} dice.",
+        "remaining": {
+          "plural": "{remaining} dice remain in the pool.",
+          "singular": "1 die remains in the pool."
+        }
+      },
+      "completed": {
+        "flavor": "Pool completed",
+        "message": "Pool '{name}' completed after dropping {droppedDice} dice."
+      },
+      "created": {
+        "flavor": "Pool created",
+        "message": "Created pool '{name}'",
+        "configuration": "Pool: {dice}{dieSize}, drop at {dropThreshold} or below"
+      },
+      "actions": {
+        "roll": "Roll",
+        "remove": "Remove",
+        "showTracker": "Tracker"
+      }
+    }
+  }
+}
