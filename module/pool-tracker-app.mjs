@@ -7,7 +7,6 @@ let app;
 
 function initialize() {
     app ??= new PoolTrackerApplication();
-    foundry.helpers.Hooks.once("ready", () => app.render(true));
 }
 
 function render(options = true) {
